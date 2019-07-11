@@ -1,0 +1,39 @@
+git config --global alias.co checkout  = set aliases
+git config --global alias.unstage 'reset HEAD --'  = unstaging shortcut
+
+
+
+git commit --ammend  = change commited message before pushing
+git reset HEAD = revert the changes to latest head if we mistakenly added to branch
+git reset HEAD -- <filename>  = revert only specific files which added to local repo
+git remote add <shortname> <url> = add remote
+git remote show origin  = show all the branches and files in remote
+git remote rename/remove <shortname>  = remove or rename the added remote
+git fetch <shortname> = use to push changes
+
+
+git log = shows logs
+git log --follow <filenemae>  = list the history of specified filename
+git log -p = shows the difference
+git log --stat  = shows modified lines of code or added files
+git log --pretty=oneline = simplified way to see logs in one lines
+git log --pretty=format:"%h - %an, %ar : %s"  = customize the output from above one.
+git log --pretty=oneline  && git tag -a v1.2 9fceb02  = tag commit later
+
+git tag -a v1.4 -m "my version 1.4"
+git tag -l
+git tag -d v1.4
+git show v1.0
+git push origin v1.0 = tags will not push to remote bydefault, we need to push them manually
+git push origin --tags = push all tags
+git push origin --delete v1.0 = delete remote tag
+git checkout 2.0 = way to check 2.0 version files
+
+git branch --merged  = to see merged branches
+git branch --no-merged  = Branches that are not merged
+
+
+git stash  = stash all modified tracked files
+git stash pop  = Restores all stashed files
+git stash list  = list all stashed files
+git stash drop  = drop all files which are stashed
